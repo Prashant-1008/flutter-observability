@@ -35,11 +35,14 @@ services:
       - "${TEMPO_PORT}:4317"
     command: ["-config.file=/etc/tempo.yaml"]
     volumes:
-      - tempo_data:/tmp/tempo
+      - ./tempo_data:/tmp/tempo
       - ./tempo.yaml:/etc/tempo.yaml
 
   prometheus:
     image: prom/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--web.enable-remote-write-receiver'
     ports:
       - "${PROMETHEUS_PORT}:9090"
     volumes:

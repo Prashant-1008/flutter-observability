@@ -37,7 +37,7 @@ class _CounterPageState extends State<CounterPage> {
 
     try {
       await http.get(
-        Uri.parse('https://example.com/ping'), // Dummy endpoint
+        Uri.parse('http://alloy:4318/v1/traces'), // Dummy endpoint
         headers: {
           'traceparent': '00-$traceId-$spanId-01', // Simulated trace
         },
