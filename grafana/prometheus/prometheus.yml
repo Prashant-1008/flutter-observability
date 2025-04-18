@@ -1,0 +1,8 @@
+# /Users/prashant/flutterOBSERVE2/flutter-observability/prometheus.yml
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'flutter_app'
+    static_configs:
+      - targets: ['flutter_app:8080']

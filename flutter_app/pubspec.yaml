@@ -1,0 +1,19 @@
+name: flutter_observability
+description: A Flutter web app with observability
+publish_to: "none"
+version: 1.0.0
+
+environment:
+  sdk: '^3.7.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.0  # or any version that works with your code
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
